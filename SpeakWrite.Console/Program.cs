@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using log4net;
 using log4net.Config;
 using SpeakWrite.API;
@@ -17,7 +14,7 @@ namespace SpeakWrite.Console
     class Program
     {
         //get logger
-        private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly ILog Log = LogManager.GetLogger(typeof(Program));
         static void Main(string[] args)
         {
             //default, simple log4net implementation for demo purposes
