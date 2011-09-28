@@ -68,11 +68,22 @@ namespace SpeakWrite.API
             var formParameters = new NameValueCollection
                                      {
                                          {"applicationid", request.ApplicationID.ToString()},
-                                         {"filename", request.FileName},
                                          {"accountnumber", request.AccountNumber},
                                          {"pin", request.PIN},
                                          {"filetype", request.Type == JobDownloadRequest.DownloadType.Document ? "document" : "audio-source"}
                                      };
+            if(String.IsNullOrEmpty(request.FileName))
+            {
+                if(String.IsNullOrEmpty(request.CustomFileName))
+                {
+                    throw new ArgumentException("Must provide either FileName or CustomFile name of file to download");
+                }
+                formParameters.Add("customfilename", request.CustomFileName);
+            }
+            else
+            {
+                formParameters.Add("filename", request.FileName);
+            }
 
             var webRequest = CreatePostRequest(BaseUri + "download.ashx", formParameters);
             var webResponse = GetResponse(webRequest);

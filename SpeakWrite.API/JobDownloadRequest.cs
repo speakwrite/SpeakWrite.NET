@@ -11,6 +11,12 @@
         public string FileName { get; set; }
 
         /// <summary>
+        /// Instead supplying FileName you can optionally supply your unique CustomFileName
+        /// you supplied when you created the job
+        /// </summary>
+        public string CustomFileName { get; set; }
+
+        /// <summary>
         /// Path to local file name to create and download the remote file into
         /// </summary>
         public string DestinationFileName { get; set; }
