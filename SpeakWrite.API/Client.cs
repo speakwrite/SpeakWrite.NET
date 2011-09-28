@@ -116,6 +116,10 @@ namespace SpeakWrite.API
                                      {"accountnumber", request.AccountNumber},
                                      {"pin", request.PIN}
                                  };
+            if(request.MaxAge.HasValue)
+            {
+                parameters.Add("maxage", request.MaxAge.Value.ToLongTimeString());
+            }
             var address = BaseUri + "completedjobs.ashx";
             Log.DebugFormat("Requesting completed jobs: {0}", address);
 
