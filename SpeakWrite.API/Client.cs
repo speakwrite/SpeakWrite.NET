@@ -64,7 +64,6 @@ namespace SpeakWrite.API
         /// <returns>A response with status of the operation</returns>
         public JobDownloadResponse Download(JobDownloadRequest request)
         {
-            var httpRequest = (HttpWebRequest)WebRequest.Create(BaseUri + "submitjob.ashx");
             var formParameters = new NameValueCollection
                                      {
                                          {"applicationid", request.ApplicationID.ToString()},
