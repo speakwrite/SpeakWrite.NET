@@ -69,7 +69,7 @@ namespace SpeakWrite.API
                                          {"applicationid", request.ApplicationID.ToString()},
                                          {"accountnumber", request.AccountNumber},
                                          {"pin", request.PIN},
-                                         {"filetype", request.Type == JobDownloadRequest.DownloadType.Document ? "document" : "audio-source"}
+                                         {"filetype", request.Type == JobDownloadRequest.DownloadType.Document ? "document" : "audio-wav"}
                                      };
             if(String.IsNullOrEmpty(request.FileName))
             {
