@@ -45,7 +45,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
     **Content**: 
 ```json
 { 
-  "FileName" : "ExampleFileName" 
+  "FileName" : "JobFileName" 
 }
 ```
 
@@ -99,7 +99,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
   "jobs" : [
     {
       "customFileName" : "Custom File Name",
-      "fileName" : "ExampleFileName",
+      "fileName" : "JobFileName",
       "accountNumber" : "123456789",
       "downloadUrl" : "https://service.speak-write.com/IntegrationService/api/v1/download.ashx?a=EQepXAs1yChcfYXmctinB"
     }
@@ -144,8 +144,8 @@ Please open an issue on the repository for any help, feature requests, or bug re
   `accountnumber`|string|**Y**|Your account number
   `pin`|string|**Y**|Your pin
   `filetype`|string|**Y**|File type to download. Options are `document` or `audio-source`
-  `filename`|string|N|Filename of the job to download. Either this field or `customfilename` is required
-  `customfilename`|string|N|Custom filename of the job to download. Either this field or `filename` is required
+  `filename`|string|N|Filename of the job to download. Either this field or `customfilename` is required. If both are used, `customfilename` is ignored
+  `customfilename`|string|N|Custom filename of the job to download. Either this field or `filename` is required. If both are used, `customfilename` is ignored
 
 - **Form Parameters**<br/>
   None
