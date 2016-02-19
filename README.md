@@ -69,7 +69,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
     See the `SpeakWrite.API.Client.UploadJob` method for a detailed example.
   
 ### Get Completed Jobs
-    Mechanism to query the SpeakWrite system for all completed jobs since a given date.
+    Mechanism to query the SpeakWrite system for all completed jobs since a given date up to the account's retention period.
   
 - **URL**<br/>
   `integration/api/v1/completedjobs.ashx`
