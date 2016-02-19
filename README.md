@@ -18,7 +18,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
 
 ## API Documentation
 ### Submit Job
-    Mechanism to submit a file (audio, video, pdf) to the SpeakWrite system.
+  Mechanism to submit a file (audio, video, pdf) to the SpeakWrite system.
   
 - **URL**<br/>
   `integration/api/v1/submitjob.ashx`
@@ -69,7 +69,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
     See the `SpeakWrite.API.Client.UploadJob` method for a detailed example.
   
 ### Get Completed Jobs
-    Mechanism to query the SpeakWrite system for all completed jobs since a given date up to the account's retention period.
+  Mechanism to query the SpeakWrite system for all completed jobs since a given date up to the account's retention period.
   
 - **URL**<br/>
   `integration/api/v1/completedjobs.ashx`
@@ -128,7 +128,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
     See the `SpeakWrite.API.Client.GetCompletedJobs` method for a detailed example.
   
 ### Download Job
-    Mechanism to download a completed job from the SpeakWrite System.
+  Mechanism to download a completed job from the SpeakWrite System.
   
 - **URL**<br/>
   `integration/api/v1/download.ashx`
