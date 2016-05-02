@@ -18,5 +18,10 @@ namespace SpeakWrite.API
         /// the SpeakWrite FileName as it is gaurenteed to be unique.
         /// </summary>
         public string CustomFileName { get; set; }
+
+        /// <summary>
+        /// Optional: True if the submitted audio has more than one speaker, False otherwise.
+        /// </summary>
+        public bool IsGroupConversation { get; set; }
     }
 }

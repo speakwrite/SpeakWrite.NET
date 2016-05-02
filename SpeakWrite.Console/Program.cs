@@ -105,7 +105,7 @@ namespace SpeakWrite.Console
             var request = new JobUploadRequest();
             if(args.Length < 4)
             {
-                System.Console.WriteLine("Usage: sw upload <account_number> <pin> <path_to_file> <custom_file_name>(optional)");
+                System.Console.WriteLine("Usage: sw upload <account_number> <pin> <path_to_file> <custom_file_name>(optional) <is_group_conversation>(optional)");
                 return;
             }
             //your SpeakWrite account number
@@ -124,6 +124,13 @@ namespace SpeakWrite.Console
             if(args.Length > 4)
             {
                 request.CustomFileName = args[4];
+            }
+            //optional, True for a conversation with more than one speaker, defaults to False
+            if (args.Length > 5)
+            {
+                bool isGroupConversation = false;
+                bool.TryParse(args[5], out isGroupConversation);
+                request.IsGroupConversation = isGroupConversation;
             }
             var client = new Client();
             //issue request
