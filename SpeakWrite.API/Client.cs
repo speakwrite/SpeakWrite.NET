@@ -52,7 +52,8 @@ namespace SpeakWrite.API
                                          {"applicationid", request.ApplicationID.ToString()},
                                          {"customFilename", request.CustomFileName},
                                          {"accountnumber", request.AccountNumber},
-                                         {"pin", request.PIN}
+                                         {"pin", request.PIN},
+                                         {"isGroupConversation", request.IsGroupConversation.ToString()},               
                                      };
             return UploadFile(httpRequest, request.AudioFile, "audiofile", "audio/mp3", formParameters);
         }
