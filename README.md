@@ -21,7 +21,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
   Mechanism to submit a file (audio, video, pdf) to the SpeakWrite system.
   
 - **URL**<br/>
-  `integration/api/v1/submitjob.ashx`
+  `integration/api/v2/submitjob.ashx`
 
 - **Method**<br/>
   `POST`
@@ -72,7 +72,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
   Mechanism to query the SpeakWrite system for all completed jobs since a given date up to the account's retention period.
   
 - **URL**<br/>
-  `integration/api/v1/completedjobs.ashx`
+  `integration/api/v2/completedjobs.ashx`
 
 - **Method**<br/>
   `GET`
@@ -101,7 +101,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
       "customFileName" : "Custom File Name",
       "fileName" : "JobFileName",
       "accountNumber" : "123456789",
-      "downloadUrl" : "https://service.speak-write.com/IntegrationService/api/v1/download.ashx?a=EQepXAs1yChcfYXmctinB"
+      "downloadUrl" : "https://service.speak-write.com/IntegrationService/api/v2/download.ashx?a=EQepXAs1yChcfYXmctinB"
     }
   ]
 }
@@ -131,7 +131,7 @@ Please open an issue on the repository for any help, feature requests, or bug re
   Mechanism to download a completed job from the SpeakWrite System.
   
 - **URL**<br/>
-  `integration/api/v1/download.ashx`
+  `integration/api/v2/download.ashx`
 
 - **Method**<br/>
   `GET`
